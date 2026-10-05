@@ -1,0 +1,1963 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Executive Interview Mastery & Tactical Voice Lab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg: #F8FAFC;
+      --card-bg: #FFFFFF;
+      --border: #E2E8F0;
+      --border-focus: #C7D2FE;
+      --text: #0F172A;
+      --text-muted: #64748B;
+      --primary: #4F46E5;
+      --primary-hover: #4338CA;
+      --primary-light: #EEF2FF;
+      --accent: #7C3AED;
+      --accent-light: #F5F3FF;
+      --success: #10B981;
+      --success-light: #ECFDF5;
+      --danger: #EF4444;
+      --danger-light: #FEF2F2;
+      --mono: 'JetBrains Mono', monospace;
+      --sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      --radius: 12px;
+      --shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.06);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.6;
+      display: flex;
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 290px;
+      height: 100vh;
+      background: var(--card-bg);
+      border-right: 1px solid var(--border);
+      padding: 1.5rem 1.2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      z-index: 100;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .brand-icon {
+      width: 34px;
+      height: 34px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 800;
+      font-size: 0.85rem;
+    }
+
+    .brand-title {
+      font-size: 0.92rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-sub {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-family: var(--mono);
+    }
+
+    .nav-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+      margin: 0.75rem 0;
+      overflow-y: auto;
+      max-height: calc(100vh - 170px);
+      padding-right: 0.25rem;
+    }
+
+    .nav-item a {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      padding: 0.4rem 0.6rem;
+      text-decoration: none;
+      color: var(--text-muted);
+      font-size: 0.76rem;
+      font-weight: 600;
+      border-radius: 6px;
+      transition: all 0.15s ease;
+    }
+
+    .nav-item a:hover {
+      background: var(--primary-light);
+      color: var(--primary);
+    }
+
+    .nav-index {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      color: var(--text-muted);
+    }
+
+    .sidebar-footer {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border);
+      padding-top: 0.75rem;
+    }
+
+    .main-content {
+      margin-left: 290px;
+      width: calc(100% - 290px);
+      padding: 2.5rem 3.5rem;
+      max-width: 1300px;
+    }
+
+    .slide {
+      min-height: 92vh;
+      margin-bottom: 4.5rem;
+      padding: 2.75rem;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .slide-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.3rem 0.75rem;
+      background: var(--primary-light);
+      border: 1px solid var(--border-focus);
+      color: var(--primary);
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-family: var(--mono);
+      font-weight: 700;
+      margin-bottom: 0.85rem;
+      width: fit-content;
+    }
+
+    .slide h2 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.4rem;
+      line-height: 1.2;
+    }
+
+    .slide-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      margin-bottom: 1.75rem;
+      max-width: 900px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.75rem;
+      margin: 1rem 0;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+      margin: 1.25rem 0;
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin: 1.25rem 0;
+    }
+
+    .card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.25rem;
+    }
+
+    .card-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      margin-bottom: 1rem;
+      background: #000;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .framework-box {
+      border-left: 3px solid var(--primary);
+      background: var(--primary-light);
+      padding: 0.85rem 1.15rem;
+      border-radius: 0 8px 8px 0;
+      margin: 0.75rem 0;
+    }
+
+    .framework-title {
+      font-family: var(--mono);
+      font-size: 0.725rem;
+      text-transform: uppercase;
+      color: var(--primary);
+      font-weight: 700;
+      margin-bottom: 0.2rem;
+    }
+
+    .framework-text {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .answer-box {
+      background: #0F172A;
+      color: #F8FAFC;
+      border-radius: 10px;
+      padding: 1.25rem;
+      font-size: 0.92rem;
+      line-height: 1.6;
+      margin: 0.75rem 0;
+    }
+
+    .answer-tag {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      color: #94A3B8;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .loop-highlight {
+      color: #A5B4FC;
+      font-weight: 600;
+      display: block;
+      margin-top: 0.6rem;
+      padding-top: 0.6rem;
+      border-top: 1px dashed #334155;
+    }
+
+    .vocab-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.875rem;
+    }
+
+    .vocab-table th, .vocab-table td {
+      border: 1px solid var(--border);
+      padding: 0.75rem 1rem;
+      text-align: left;
+    }
+
+    .vocab-table th {
+      background: var(--bg);
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+    }
+
+    .vocab-word {
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .vocab-phonetic {
+      font-family: var(--mono);
+      font-size: 0.85rem;
+      color: var(--accent);
+      background: var(--accent-light);
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      display: inline-block;
+      font-weight: 700;
+    }
+
+    .vocab-meaning {
+      font-size: 0.825rem;
+      color: var(--text);
+    }
+
+    .vocab-example {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-style: italic;
+    }
+
+    .voice-lab-interface {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .lab-selector {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .select-dropdown {
+      font-family: var(--sans);
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 0.6rem 1rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: #fff;
+      color: var(--text);
+      outline: none;
+      cursor: pointer;
+      flex-grow: 1;
+    }
+
+    .select-dropdown:focus {
+      border-color: var(--primary);
+    }
+
+    .target-sentence-card {
+      background: #FFFFFF;
+      border: 2px dashed var(--border-focus);
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .target-label {
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      color: var(--primary);
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .target-sentence {
+      font-size: 1.25rem;
+      font-weight: 700;
+      line-height: 1.5;
+      color: var(--text);
+    }
+
+    .target-phonetics {
+      font-family: var(--mono);
+      font-size: 0.85rem;
+      color: var(--accent);
+      background: var(--accent-light);
+      padding: 0.5rem 0.85rem;
+      border-radius: 6px;
+      margin-top: 0.85rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      align-items: center;
+      font-weight: 600;
+    }
+
+    .phonetic-chip {
+      background: #fff;
+      border: 1px solid var(--border);
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      color: var(--text);
+      font-size: 0.8rem;
+    }
+
+    .phonetic-chip strong {
+      color: var(--primary);
+    }
+
+    .voice-controls {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .mic-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      font-family: var(--sans);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .mic-button:hover { background: var(--primary-hover); }
+
+    .mic-button.recording {
+      background: var(--danger);
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4); }
+      70% { box-shadow: 0 0 0 12px rgba(239, 68, 68, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+    }
+
+    .status-indicator {
+      font-family: var(--mono);
+      font-size: 0.825rem;
+      color: var(--text-muted);
+    }
+
+    .feedback-panel {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.25rem;
+    }
+
+    .feedback-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.75rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+
+    .score-badge {
+      font-family: var(--mono);
+      font-weight: 700;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      background: var(--primary-light);
+      color: var(--primary);
+    }
+
+    .recognized-words {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+    }
+
+    .word-correct {
+      color: var(--success);
+      font-weight: 700;
+      background: var(--success-light);
+      padding: 0.1rem 0.35rem;
+      border-radius: 4px;
+    }
+
+    .word-missed {
+      color: var(--danger);
+      font-weight: 700;
+      background: var(--danger-light);
+      padding: 0.1rem 0.35rem;
+      border-radius: 4px;
+      text-decoration: line-through;
+    }
+
+    .slide-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 2rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .slide-counter {
+      font-family: var(--mono);
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .next-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--primary);
+      color: #fff;
+      font-size: 0.875rem;
+      font-weight: 600;
+      padding: 0.65rem 1.25rem;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .next-btn:hover {
+      background: var(--primary-hover);
+      transform: translateY(-1px);
+    }
+  </style>
+</head>
+<body>
+
+  <aside class="sidebar">
+    <div>
+      <div class="brand">
+        <div class="brand-icon">AC</div>
+        <div>
+          <div class="brand-title">Special Courses Track</div>
+          <div class="brand-sub">Activity Hub • 26 Slides</div>
+        </div>
+      </div>
+
+      <ul class="nav-list">
+        <li class="nav-item"><a href="#slide-0"><span class="nav-index">00</span> Title & Overview</a></li>
+        <li class="nav-item"><a href="#slide-1"><span class="nav-index">01</span> Master Class Agenda</a></li>
+        <li class="nav-item"><a href="#slide-2"><span class="nav-index">02</span> Small Talk Warmup</a></li>
+        <li class="nav-item"><a href="#slide-3"><span class="nav-index">03</span> The Answer in Question</a></li>
+        <li class="nav-item"><a href="#slide-4"><span class="nav-index">04</span> Express Verb Radar</a></li>
+        <li class="nav-item"><a href="#slide-5"><span class="nav-index">05</span> Time-Buyers & Fillers</a></li>
+        <li class="nav-item"><a href="#slide-6"><span class="nav-index">06</span> Circumlocution Protocol</a></li>
+        <li class="nav-item"><a href="#slide-7"><span class="nav-index">07</span> The Conversation Loop</a></li>
+        <li class="nav-item"><a href="#slide-8"><span class="nav-index">08</span> V1: Pitch (Video)</a></li>
+        <li class="nav-item"><a href="#slide-9"><span class="nav-index">09</span> V1: Vocab & Phonics</a></li>
+        <li class="nav-item"><a href="#slide-10"><span class="nav-index">10</span> V1: Roleplay Sandbox</a></li>
+        <li class="nav-item"><a href="#slide-11"><span class="nav-index">11</span> V2: Weakness (Video)</a></li>
+        <li class="nav-item"><a href="#slide-12"><span class="nav-index">12</span> V2: Vocab & Phonics</a></li>
+        <li class="nav-item"><a href="#slide-13"><span class="nav-index">13</span> V2: Roleplay Sandbox</a></li>
+        <li class="nav-item"><a href="#slide-14"><span class="nav-index">14</span> V3: Crisis (Video)</a></li>
+        <li class="nav-item"><a href="#slide-15"><span class="nav-index">15</span> V3: Vocab & Phonics</a></li>
+        <li class="nav-item"><a href="#slide-16"><span class="nav-index">16</span> V3: Roleplay Sandbox</a></li>
+        <li class="nav-item"><a href="#slide-17"><span class="nav-index">17</span> V4: Value Prop (Video)</a></li>
+        <li class="nav-item"><a href="#slide-18"><span class="nav-index">18</span> V4: Vocab & Phonics</a></li>
+        <li class="nav-item"><a href="#slide-19"><span class="nav-index">19</span> V4: Roleplay Sandbox</a></li>
+        <li class="nav-item"><a href="#slide-20"><span class="nav-index">20</span> V5: Salary & Hours (Video)</a></li>
+        <li class="nav-item"><a href="#slide-21"><span class="nav-index">21</span> V5: Vocab & Phonics</a></li>
+        <li class="nav-item"><a href="#slide-22"><span class="nav-index">22</span> V5: Roleplay Sandbox</a></li>
+        <li class="nav-item"><a href="#slide-23"><span class="nav-index">23</span> Mock: Agency Screener</a></li>
+        <li class="nav-item"><a href="#slide-24"><span class="nav-index">24</span> Mock: Church Team</a></li>
+        <li class="nav-item"><a href="#slide-25"><span class="nav-index">25</span> 🎙️ Real-time Voice Lab</a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-footer">
+      Candidate: Agustín Puentes<br>
+      Position: Media & Marketing Mgr
+    </div>
+  </aside>
+
+  <main class="main-content">
+
+    <section id="slide-0" class="slide">
+      <div>
+        <span class="slide-badge">INTENSIVE MASTERCLASS • SPECIAL COURSES TRACK</span>
+        <h2>Interview Mastery & Technical Speaking Deck</h2>
+        <p class="slide-subtitle">Executive preparation deck tailored for Agustín Puentes. Media & Marketing Manager for Harvest Church & Bishop Kevin Foreman ($1,500 USD/mo, Remote US Eastern Time).</p>
+
+        <div class="grid-3">
+          <div class="card">
+            <div class="card-title">🎯 The Candidate Profile</div>
+            <p style="font-size:0.85rem; color:var(--text-muted);">
+              • Creative Director at Owlbox (Slack triage, QA & copy)<br>
+              • Founder of wewant studio (London client, web & Mailchimp)<br>
+              • Generative AI stack (Claude, Runway, Veo & Vertex AI)
+            </p>
+          </div>
+          <div class="card">
+            <div class="card-title">⚡ The Core Challenge</div>
+            <p style="font-size:0.85rem; color:var(--text-muted);">
+              • Break verbatim memorization & avoid freezing.<br>
+              • Align verb tenses with interviewer cues instantly.<br>
+              • Steer the interview with the Conversation Loop.
+            </p>
+          </div>
+          <div class="card">
+            <div class="card-title">🎙️ Tactical Outcome</div>
+            <p style="font-size:0.85rem; color:var(--text-muted);">
+              Develop natural fluency, master church broadcast terminology, and validate responses in real time using Google Speech API.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-footer">
+        <span class="slide-counter">Slide 00 / 25</span>
+        <a href="#slide-1" class="next-btn">Next: Master Class Agenda →</a>
+      </div>
+    </section>
+
+    <section id="slide-1" class="slide">
+      <div>
+        <span class="slide-badge">CLASS ROADMAP • STEP-BY-STEP</span>
+        <h2>Master Class Agenda & Learning Modules</h2>
+        <p class="slide-subtitle">A structured roadmap designed to guide you from linguistic foundations to high-pressure live simulations.</p>
+
+        <div class="grid-3">
+          <div class="card" style="border-top: 3px solid var(--primary);">
+            <div class="card-title">Part 1: Linguistic Foundations</div>
+            <ul style="font-size:0.825rem; line-height:1.8; color:var(--text-muted); padding-left:1.1rem;">
+              <li>Small Talk & Icebreakers (First 90s)</li>
+              <li>The "Answer in the Question" Rule</li>
+              <li>Express Verb Tenses Radar</li>
+              <li>Time-Buyers & Emergency Circumlocution</li>
+              <li>The Conversation Loop Framework (A-C-E)</li>
+            </ul>
+          </div>
+
+          <div class="card" style="border-top: 3px solid var(--accent);">
+            <div class="card-title">Part 2: Tactical Video Modules</div>
+            <ul style="font-size:0.825rem; line-height:1.8; color:var(--text-muted); padding-left:1.1rem;">
+              <li>Module 1: The Elevator Pitch (Present-Past-Future)</li>
+              <li>Module 2: The Weakness Question (The 10/90 Rule)</li>
+              <li>Module 3: Crisis & Live Triage (The S-O-A-L Model)</li>
+              <li>Module 4: Value Proposition & AI Advantage</li>
+              <li>Module 5: Salary & Availability ($1,500/mo EST)</li>
+            </ul>
+          </div>
+
+          <div class="card" style="border-top: 3px solid var(--success);">
+            <div class="card-title">Part 3: Simulations & Lab</div>
+            <ul style="font-size:0.825rem; line-height:1.8; color:var(--text-muted); padding-left:1.1rem;">
+              <li>Mock Round 1: Fast-Paced Agency Screener</li>
+              <li>Mock Round 2: Executive Church Leadership</li>
+              <li>Real-Time Google Voice Lab (10 Live Scenarios)</li>
+              <li>Phonetic Audit & Personalized Feedback</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-footer">
+        <span class="slide-counter">Slide 01 / 25</span>
+        <a href="#slide-2" class="next-btn">Next: Small Talk Warmup →</a>
+      </div>
+    </section>
+
+    <section id="slide-2" class="slide">
+      <div>
+        <span class="slide-badge">FOUNDATIONS • RAPPORT & ICEBREAKERS</span>
+        <h2>Small Talk: The First 90 Seconds</h2>
+        <p class="slide-subtitle">In US interviews, the call begins the second the camera turns on. Never say just "I'm fine". Use the <em>"Answer + Context + Bounce-Back"</em> pattern.</p>
+
+        <div class="grid-3">
+          <div class="card" style="border-top: 3px solid var(--primary);">
+            <div class="card-title">The Energy Pulse</div>
+            <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom: 0.6rem;">When asked: <em>"How's your day going so far?"</em></p>
+            <div style="font-family:var(--mono); font-size:0.78rem; line-height:1.7;">
+              "It's going great! Just wrapped up our morning design triage and reviews, and I've been really looking forward to connecting today. How is everything on your end?"
+            </div>
+          </div>
+
+          <div class="card" style="border-top: 3px solid var(--accent);">
+            <div class="card-title">Location & Weather Anchor</div>
+            <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom: 0.6rem;">When asked: <em>"Where are you calling in from?"</em></p>
+            <div style="font-family:var(--mono); font-size:0.78rem; line-height:1.7;">
+              "I'm based down in Buenos Aires! Spring weather is kicking in down here. Are you guys currently based in Denver or Atlanta?"
+            </div>
+          </div>
+
+          <div class="card" style="border-top: 3px solid var(--success);">
+            <div class="card-title">Media Pro Tech Check</div>
+            <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom: 0.6rem;">Validating your audio/video feed:</p>
+            <div style="font-family:var(--mono); font-size:0.78rem; line-height:1.7;">
+              "Audio and video look crystal clear on my monitor. Can you hear me loud and well?"
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-footer">
+        <span class="slide-counter">Slide 02 / 25</span>
+        <a href="#slide-3" class="next-btn">Next: The Answer in the Question →</a>
+      </div>
+    </section>
+
+    <section id="slide-3" class="slide">
+      <div>
+        <span class="slide-badge">FOUNDATIONS • VERB TENSE RADAR</span>
+        <h2>The Answer is in the Question</h2>
+        <p class="slide-subtitle">Never freeze trying to conjugate verbs. The interviewer's auxiliary verb reveals the exact grammatical tense for your opening sentence.</p>
+
+        <div class="grid-4">
+          <div class="card">
+            <div class="card-title" style="color:var(--primary);">DID you...?</div>
+            <p style="font-size:0.8rem; color:var(--text-muted); margin-bottom: 0.5rem;">Target: <strong>Past Simple (-ed or irregular)</strong></p>
+            <div style="font-family:var(--mono); font-size:0.75rem;">
+              Q: "Did you manage that alone?"<br>
+              A: "<strong>I coordinated</strong> the creative team in Slack..."
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-title" style="color:var(--accent);">HAVE you ever...?</div>
+            <p style="font-size:0.8rem; color:var(--text-muted); margin-bottom: 0.5rem;">Target: <strong>Present Perfect (Have + Past Part.)</strong></p>
+            <div style="font-family:var(--mono); font-size:0.75rem;">
+              Q: "Have you worked with overseas clients?"<br>
+              A: "<strong>I have managed</strong> website and marketing for a London clinic..."
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-title" style="color:var(--warning);">HOW DO you...?</div>
+            <p style="font-size:0.8rem; color:var(--text-muted); margin-bottom: 0.5rem;">Target: <strong>Present Simple (Habits & Systems)</strong></p>
+            <div style="font-family:var(--mono); font-size:0.75rem;">
+              Q: "How do you check visual assets?"<br>
+              A: "<strong>I review</strong> hierarchy, typography, and brief alignment..."
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-title" style="color:var(--success);">WOULD you be...?</div>
+            <p style="font-size:0.8rem; color:var(--text-muted); margin-bottom: 0.5rem;">Target: <strong>Conditional (I would / I'm ready to)</strong></p>
+            <div style="font-family:var(--mono); font-size:0.75rem;">
+              Q: "Would you work around worship broadcasts?"<br>
+              A: "<strong>I would be</strong> fully available on call for Sunday needs..."
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-footer">
+        <span class="slide-counter">Slide 03 / 25</span>
+        <a href="#slide-4" class="next-btn">Next: Express Verb Radar →</a>
+      </div>
+    </section>
+
+    <section id="slide-4" class="slide">
+      <div>
+        <span class="slide-badge">FOUNDATIONS • GRAMMAR RADAR</span>
+        <h2>Express Verb Tenses Radar</h2>
+        <p class="slide-subtitle">Sincroniza tu respuesta con la intención exacta de la pregunta para sonar seguro y evitar errores de conjugación.</p>
+
+        <div class="grid-4">
+          <div class="card" style="border-top: 3px solid var(--primary);">
+            <div class="card-title">1. Present Simple</div>
+            <p style="font-size:0.75rem; color:var(--primary); font-family:var(--mono); font-weight:700;">RUTINAS, SISTEMAS Y HÁBITOS</p>
+            <p style="font-size:0.8rem; color:var(--text-muted); margin:0.4rem 0;">Trigger: <em>"How do you...", "What does your day look like?"</em></p>
+            <div style="font-family:var(--mono); font-size:0.725rem; line-height:1.6;">
+              <strong>Fórmula:</strong> I + Verbo Base<br>
+              • "Every morning, <strong>I review</strong> Slack and <strong>distribute</strong> tasks."<br>
+              • "Before publishing, <strong>I check</strong> typography and hierarchy."
+            </div>
+          </div>
+
+          <div class="card" style="border-top: 3px solid var(--accent);">
+            <div class="card-title">2. Present Perfect</div>
+            <p style="font-size:0.75rem; color:var(--accent); font-family:var(--mono); font-weight:700;">TRAYECTORIA Y HERRAMIENTAS</p>
+            <p style="font-size:0.8rem; color:var(--text-muted); margin:0.4rem 0;">Trigger: <em>"Have you worked with...", "What tools have you used?"</em></p>
+            <div style="font-family:var(--mono); font-size:0.725rem; line-height:1.6;">
+              <strong>Fórmula:</strong> I have + Participio (-ed)<br>
+              • "<strong>I have managed</strong> web updates for a London clinic."<br>
+              • "<strong>I have used</strong> Claude and Runway to accelerate ideation."
+            </div>
+          </div>
+
+          <div class="card" style="border-top: 3px solid var(--warning);">
+            <div class="card-title">3. Past Simple</div>
+            <p style="font-size:0.75rem; color:var(--warning); font-family:var(--mono); font-weight:700;">ANÉCDOTAS PUNTUALES (CRISIS)</p>
+            <p style="font-size:0.8rem; color:var(--text-muted); margin:0.4rem 0;">Trigger: <em>"Tell me about a time you...", "What happened when...?"</em></p>
+            <div style="font-family:var(--mono); font-size:0.725rem; line-height:1.6;">
+              <strong>Fórmula:</strong> I + Verbo en Pasado<br>
+              • "When an asset failed, <strong>I isolated</strong> the template and <strong>fixed</strong> it."<br>
+              • "Early on, <strong>I learned</strong> to work with staged reviews."
+            </div>
+          </div>
+
+          <div class="card" style="border-top: 3px solid var(--success);">
+            <div class="card-title">4. Conditional "Would"</div>
+            <p style="font-size:0.75rem; color:var(--success); font-family:var(--mono); font-weight:700;">DISPONIBILIDAD Y LÍMITES</p>
+            <p style="font-size:0.8rem; color:var(--text-muted); margin:0.4rem 0;">Trigger: <em>"Would you work...", "What would you do if...?"</em></p>
+            <div style="font-family:var(--mono); font-size:0.725rem; line-height:1.6;">
+              <strong>Fórmula:</strong> I would / My step would be<br>
+              • "<strong>I would be</strong> fully available on call for Sunday worship."<br>
+              • "If three tasks landed, <strong>I would prioritize</strong> broadcast assets."
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-footer">
+        <span class="slide-counter">Slide 04 / 25</span>
+        <a href="#slide-5" class="next-btn">Next: Time-Buyers & Fillers →</a>
+      </div>
+    </section>
+
+    <section id="slide-5" class="slide">
+      <div>
+        <span class="slide-badge">FOUNDATIONS • FLUENCY ACCELERATORS</span>
+        <h2>Time-Buyers: Eradicate "Um... Eh..."</h2>
+        <p class="slide-subtitle">Senior professionals never fill silence with vocal hesitations. Use structured verbal bridges to buy 3 to 5 seconds of thinking time.</p>
+
+        <div class="grid-3">
+          <div class="card">
+            <div class="card-title">1. The Analytical Bridge</div>
+            <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom: 0.6rem;">When organizing complex workflows:</p>
+            <div style="font-family:var(--mono); font-size:0.8rem; color:var(--primary); line-height:1.7;">
+              • "That's a very practical question. The way I organize that is..."<br><br>
+              • "There are two main phases in my daily review process..."
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-title">2. The Experience Anchor</div>
+            <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom: 0.6rem;">When grounding your answer in past work:</p>
+            <div style="font-family:var(--mono); font-size:0.8rem; color:var(--accent); line-height:1.7;">
+              • "In my day-to-day role leading design at Owlbox..."<br><br>
+              • "That actually comes up regularly with our London clients at wewant studio..."
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-title">3. The Clarification Pivot</div>
+            <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom: 0.6rem;">When a prompt is too open-ended:</p>
+            <div style="font-family:var(--mono); font-size:0.8rem; color:var(--success); line-height:1.7;">
+              • "Just to clarify the focus: are we looking at live sermon clip turnarounds or weekly campaign concept development?"
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-footer">
+        <span class="slide-counter">Slide 05 / 25</span>
+        <a href="#slide-6" class="next-btn">Next: Circumlocution Protocol →</a>
+      </div>
+    </section>
+
+    <section id="slide-6" class="slide">
+      <div>
+        <span class="slide-badge">FOUNDATIONS • EMERGENCY TOOLKIT</span>
+        <h2>The Dynamic Circumlocution Protocol</h2>
+        <p class="slide-subtitle">Never panic when a technical word slips your mind. Use the <em>Action + Concrete Outcome</em> formula.</p>
+
+        <div class="grid-2">
+          <div class="card">
+            <div class="card-title">The Emergency Rescue Matrix</div>
+            <p style="font-size:0.88rem; color:var(--text-muted); margin-bottom: 0.75rem;">
+              Replace missing technical terms with simple, descriptive actions:
+            </p>
+            <div style="font-family:var(--mono); font-size:0.8rem; line-height: 1.8;">
+              • Forgot <strong>"Repurposing"</strong>? → <em>"Taking long recordings and cutting them into vertical clips."</em><br>
+              • Forgot <strong>"Copywriting / Scripting"</strong>? → <em>"Drafting the scripts and text for video and posts."</em><br>
+              • Forgot <strong>"Visual Hierarchy"</strong>? → <em>"Making sure the eye reads the most important text first."</em><br>
+              • Forgot <strong>"Prompt Engineering"</strong>? → <em>"Writing specific instructions for tools like Claude or Runway."</em><br>
+              • Forgot <strong>"On Call"</strong>? → <em>"Being available to jump on an urgent fix if anything happens."</em>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-title">The 3-Second Composure Reset</div>
+            <p style="font-size:0.88rem; color:var(--text-muted); margin-bottom: 0.75rem;">
+              If your train of thought drifts, never apologize profusely. Use an executive reset:
+            </p>
+            <div class="framework-box">
+              <div class="framework-title">Executive Reset Phrases</div>
+              <div class="framework-text">"Let me rephrase that to be completely clear..." or "The bottom line is..."</div>
+            </div>
+            <p style="font-size:0.85rem; color:var(--text-muted); margin-top: 0.75rem;">
+              Recruiters judge emotional control. A composed pause followed by a clean summary projects leadership maturity.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-footer">
+        <span class="slide-counter">Slide 06 / 25</span>
+        <a href="#slide-7" class="next-btn">Next: The Conversation Loop →</a>
+      </div>
+    </section>
+
+    <section id="slide-7" class="slide">
+      <div>
+        <span class="slide-badge">FOUNDATIONS • ACTIVE STEERING</span>
+        <h2>The Conversation Loop (A-C-E)</h2>
+        <p class="slide-subtitle">Transform the interview from a one-sided interrogation into an executive business dialogue.</p>
+
+        <div class="grid-3">
+          <div class="card" style="border-top: 3px solid var(--primary);">
+            <div class="card-title">A - Answer (30-45s)</div>
+            <p style="font-size:0.85rem; color:var(--text-muted);">
+              Lead with the conclusion, followed by 1 or 2 concrete examples. Avoid lengthy preludes.
+            </p>
+          </div>
+
+          <div class="card" style="border-top: 3px solid var(--accent);">
+            <div class="card-title">C - Connect (10s)</div>
+            <p style="font-size:0.85rem; color:var(--text-muted);">
+              Bridge the experience directly to Harvest Church, Bishop Foreman, or the agency's daily flow.
+            </p>
+          </div>
+
+          <div class="card" style="border-top: 3px solid var(--success);">
+            <div class="card-title">E - Engage (The Loop Question)</div>
+            <p style="font-size:0.85rem; color:var(--text-muted);">
+              Pass the ball back with an open-ended operational question that confirms your alignment.
+            </p>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top: 1rem;">
+          <div class="card-title">Agustín's Real Strategic Questions (Use to Close Answers)</div>
+          <div style="font-family:var(--mono); font-size:0.825rem; line-height: 1.8; color:var(--primary);">
+            1. "Is this a brand-new role, or what key milestones are you hoping the incoming manager will improve?"<br>
+            2. "Do you already have a defined visual strategy separating Harvest Church from Bishop Foreman's personal brand?"<br>
+            3. "How does the current content review and approval flow operate between the media team and leadership?"
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-footer">
+        <span class="slide-counter">Slide 07 / 25</span>
+        <a href="#slide-8" class="next-btn">Next: Module 1 (Video Modeling) →</a>
+      </div>
+    </section>
+
+    <section id="slide-8" class="slide">
+      <div>
+        <span class="slide-badge">MODULE 1 • ELEVATOR PITCH</span>
+        <h2>Video Modeling: "Tell Me About Yourself"</h2>
+        <p class="slide-subtitle">Watch Erin McGoff break down the Present - Past - Future framework to avoid reciting your resume chronologically.</p>
+
+        <div class="grid-2">
+          <div>
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/eyehDPkAQRA?start=45" title="Tell Me About Yourself" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div>
+            <div class="framework-box">
+              <div class="framework-title">Erin's Core Strategy</div>
+              <div class="framework-text">Never start with your childhood or university graduation year. Begin with your present role, substantiate with past wins, and close with why you're here.</div>
+            </div>
+            <div class="card" style="margin-top:1rem;">
+              <div class="card-title">3 Key Takeaways to Listen For:</div>
+              <ul style="font-size:0.85rem; line-height:1.7; padding-left:1.25rem; color:var(--text-muted);">
+                <li>Hook the listener with your present identity in under 10 seconds.</li>
+                <li>Pick 1 or 2 specific career highlights that prove you can do <em>this</em> job.</li>
+                <li>Pivot forward to explain why this role is the natural next step.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-footer">
+        <span class="slide-counter">Slide 08 / 25</span>
+        <a href="#slide-9" class="next-btn">Next: Module 1 (Vocab & Phonics) →</a>
+      </div>
+    </section>
+
+    <section id="slide-9" class="slide">
+      <div>
+        <span class="slide-badge">MODULE 1 • KEY PHONETICS</span>
+        <h2>Pitch Vocabulary & Focused Phonics</h2>
+        <p class="slide-subtitle">Concéntrate únicamente en la acentuación de las palabras clave. La sílaba en MAYÚSCULAS lleva el golpe de voz.</p>
+
+        <table class="vocab-table">
+          <thead>
+            <tr>
+              <th>Término Clave</th>
+              <th>Fonética en Español</th>
+              <th>Uso en la Entrevista</th>
+              <th>Ejemplo Basado en tus Respuestas</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="vocab-word">Hierarchy</td>
+              <td><span class="vocab-phonetic">[JAI-er-ar-ki]</span></td>
+              <td>Explicar tu criterio de revisión de diseño.</td>
+              <td class="vocab-example">"I check visual hierarchy and text layout before publishing."</td>
+            </tr>
+            <tr>
+              <td class="vocab-word">Guidelines</td>
+              <td><span class="vocab-phonetic">[GAID-lainz]</span></td>
+              <td>Verificar que los flyers sigan la marca.</td>
+              <td class="vocab-example">"Ensuring assets follow brand guidelines."</td>
+            </tr>
+            <tr>
+              <td class="vocab-word">Maintenance</td>
+              <td><span class="vocab-phonetic">[MEIN-ten-ens]</span></td>
+              <td>Tu trabajo en sitios web (Tu Skin Clinic).</td>
+              <td class="vocab-example">"Managing website maintenance and Mailchimp campaigns."</td>
+            </tr>
+            <tr>
+              <td class="vocab-word">Ideation</td>
+              <td><span class="vocab-phonetic">[ai-di-EI-shon]</span></td>
+              <td>Fase de armado de conceptos y guiones.</td>
+              <td class="vocab-example">"Leading campaign ideation and script development."</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="slide-footer">
+        <span class="slide-counter">Slide 09 / 25</span>
+        <a href="#slide-10" class="next-btn">Next: Module 1 (Roleplay Sandbox) →</a>
+      </div>
+    </section>
+
+    <section id="slide-10" class="slide">
+      <div>
+        <span class="slide-badge">MODULE 1 • IMPROVISATION SANDBOX</span>
+        <h2>Pitch Sandbox: "Tell Me About Yourself"</h2>
+        <p class="slide-subtitle">Select one of three structural paths built directly from your real experience at Owlbox and wewant.</p>
+
+        <div class="grid-3">
+          <div class="card">
+            <div class="card-title">Path A: Daily Workflow & QA</div>
+            <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.75rem;">Highlight morning Slack triage & design QA:</p>
+            <div style="font-size:0.8rem; line-height:1.6; color:var(--text);">
+              "I’m a Creative Director and Multimedia Designer. At Owlbox, I start by reviewing Slack for urgent priorities, distributing tasks across designers, and reviewing assets for visual hierarchy, composition, and copy accuracy before release. What excites me about Harvest Church is taking full ownership of that daily standard across platforms."
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-title">Path B: International Web & Content</div>
+            <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.75rem;">Highlight wewant studio & UK clients:</p>
+            <div style="font-size:0.8rem; line-height:1.6; color:var(--text);">
+              "Through wewant studio, I manage end-to-end digital communication in English for international clients. For Tu Skin Clinic in London, I handle visual branding, social content, website maintenance, and Mailchimp campaigns. I’m used to resolving planned deliverables as well as urgent client requests synchronously."
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-title">Path C: Strategic Concept & AI</div>
+            <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.75rem;">Highlight research, scripting & generative AI:</p>
+            <div style="font-size:0.8rem; line-height:1.6; color:var(--text);">
+              "My process pairs concept development with modern AI pipelines. I use Claude and ChatGPT for market research and scripts, alongside Runway and Veo for audiovisual assets. I’m eager to bring that creative velocity to both Harvest Church and Bishop Foreman’s leadership platform."
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:1rem; border-left: 3px solid var(--primary);">
+          <div style="font-family:var(--mono); font-size:0.8rem; color:var(--primary); font-weight:700;">
+            Closing Loop: "Is this a newly created role, or what key milestones are you hoping the incoming manager will develop?"
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-footer">
+        <span class="slide-counter">Slide 10 / 25</span>
+        <a href="#slide-11" class="next-btn">Next: Module 2 (Video Modeling) →</a>
+      </div>
+    </section>
+
+    <section id="slide-11" class="slide">
+      <div>
+        <span class="slide-badge">MODULE 2 • THE WEAKNESS QUESTION</span>
+        <h2>Video Modeling: "What is Your Greatest Weakness?"</h2>
+        <p class="slide-subtitle">Watch Erin McGoff unpack the 10/90 rule to avoid clichés like "I'm a perfectionist".</p>
+
+        <div class="grid-2">
+          <div>
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/pmWEePmqdLk?start=30" title="What is your Greatest Weakness" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div>
+            <div class="framework-box">
+              <div class="framework-title">The 10/90 Framework</div>
+              <div class="framework-text">Spend 10% acknowledging an honest operational tendency, and 90% detailing the concrete system you engineered to overcome it.</div>
+            </div>
+            <div class="card" style="margin-top:1rem;">
+              <div class="card-title">Your Real Advantage:</div>
+              <p style="font-size:0.85rem; line-height:1.7; color:var(--text-muted);">
+                Tu respuesta real es impecable: reconoces que antes te quedabas sobre-puliendo detalles visuales, y explicas cómo aprendiste a diferenciar qué mejora realmente una pieza vs. perfeccionismo innecesario usando entregas por etapas y deadlines claros.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-footer">
+        <span class="slide-counter">Slide 11 / 25</span>
+        <a href="#slide-12" class="next-btn">Next: Module 2 (Vocab & Phonics) →</a>
+      </div>
+    </section>
+
+    <section id="slide-12" class="slide">
+      <div>
+        <span class="slide-badge">MODULE 2 • KEY PHONETICS</span>
+        <h2>Systems & Weakness Focused Phonics</h2>
+        <p class="slide-subtitle">Palabras clave para justificar cómo balanceas detalle visual con plazos estrictos.</p>
+
+        <table class="vocab-table">
+          <thead>
+            <tr>
+              <th>Término Clave</th>
+              <th>Fonética en Español</th>
+              <th>Uso en la Entrevista</th>
+              <th>Ejemplo Basado en tus Respuestas</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="vocab-word">Perfectionism</td>
+              <td><span class="vocab-phonetic">[per-FEK-shon-i-zem]</span></td>
+              <td>La tendencia a sobre-pulir detalles.</td>
+              <td class="vocab-example">"Distinguishing true visual impact from pure perfectionism."</td>
+            </tr>
+            <tr>
+              <td class="vocab-word">Milestones</td>
+              <td><span class="vocab-phonetic">[MAIL-stounz]</span></td>
+              <td>Trabajar con revisiones por etapas.</td>
+              <td class="vocab-example">"I now divide projects into structured review milestones."</td>
+            </tr>
+            <tr>
+              <td class="vocab-word">Deadlines</td>
+              <td><span class="vocab-phonetic">[DED-lainz]</span></td>
+              <td>Mantener el foco en la fecha de entrega.</td>
+              <td class="vocab-example">"Balancing visual quality with strict broadcast deadlines."</td>
+            </tr>
+            <tr>
+              <td class="vocab-word">Iterative</td>
+              <td><span class="vocab-phonetic">[IT-er-a-tiv]</span></td>
+              <td>Ajustes progresivos sin trabarse.</td>
+              <td class="vocab-example">"Working through iterative review stages."</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="slide-footer">
+        <span class="slide-counter">Slide 12 / 25</span>
+        <a href="#slide-13" class="next-btn">Next: Module 2 (Roleplay Sandbox) →</a>
+      </div>
+    </section>
+
+    <section id="slide-13" class="slide">
+      <div>
+        <span class="slide-badge">MODULE 2 • IMPROVISATION SANDBOX</span>
+        <h2>Weakness Sandbox: "What is Your Greatest Weakness?"</h2>
+        <p class="slide-subtitle">Practice framing your exact answer through three slightly different executive styles.</p>
+
+        <div class="grid-3">
+          <div class="card">
+            <div class="card-title">Angle 1: Direct Translation</div>
+            <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.75rem;">Your exact words formatted for US corporate tone:</p>
+            <div style="font-size:0.8rem; line-height:1.6; color:var(--text);">
+              "Earlier in my career, I spent excessive time perfecting micro-details. Over time, I learned to differentiate what genuinely elevates a design from what is simply perfectionism. Today, I work with clear priority tiers and staged reviews, ensuring high visual quality without losing sight of deadlines."
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-title">Angle 2: Staged Review Focus</div>
+            <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.75rem;">Focusing on process structure:</p>
+            <div style="font-size:0.8rem; line-height:1.6; color:var(--text);">
+              "My natural instinct as a designer was to polish a piece endlessly before sharing it. To manage that, I implemented phased reviews. Checking alignment on concept and hierarchy early keeps the production flow moving and prevents bottlenecking near broadcast."
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-title">Angle 3: ROI & Communication Focus</div>
+            <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.75rem;">Focusing on audience outcome:</p>
+            <div style="font-size:0.8rem; line-height:1.6; color:var(--text);">
+              "I used to get caught up in aesthetic details that didn't actually impact the audience. Now, I always evaluate whether a change serves the client's communication goal. If it doesn't move the needle, we hit export and stay on schedule."
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:1rem; border-left: 3px solid var(--primary);">
+          <div style="font-family:var(--mono); font-size:0.8rem; color:var(--primary); font-weight:700;">
+            Closing Loop: "How does the content review and approval process currently operate between the creative team and leadership?"
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-footer">
+        <span class="slide-counter">Slide 13 / 25</span>
+        <a href="#slide-14" class="next-btn">Next: Module 3 (Video Modeling) →</a>
+      </div>
+    </section>
+
+    <section id="slide-14" class="slide">
+      <div>
+        <span class="slide-badge">MODULE 3 • CRISIS & BEHAVIORAL</span>
+        <h2>Video Modeling: Crisis & Pressure</h2>
+        <p class="slide-subtitle">Watch Erin McGoff unpack behavioral questions and demonstrate executive accountability.</p>
+
+        <div class="grid-2">
+          <div>
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/AnHaoK7ihlg?start=250" title="Job Interview Crisis Questions" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div>
+            <div class="framework-box">
+              <div class="framework-title">The S-O-A-L Framework</div>
+              <div class="framework-text">Situation (5s brief) + Ownership (zero finger-pointing) + Immediate Action (triage) + Long-term Learning (system upgrade).</div>
+            </div>
+            <div class="card" style="margin-top:1rem;">
+              <div class="card-title">Your Triage Method:</div>
+              <p style="font-size:0.85rem; line-height:1.7; color:var(--text-muted);">
+                Mencionaste que ante urgencias primero identificas lo prioritario, solucionas la falla, y haces una segunda revisión del archivo antes de entregarlo, manteniendo un proceso ordenado en multitasking.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-footer">
+        <span class="slide-counter">Slide 14 / 25</span>
+        <a href="#slide-15" class="next-btn">Next: Module 3 (Vocab & Phonics) →</a>
+      </div>
+    </section>
+
+    <section id="slide-15" class="slide">
+      <div>
+        <span class="slide-badge">MODULE 3 • KEY PHONETICS</span>
+        <h2>Crisis & Church Production Focused Phonics</h2>
+        <p class="slide-subtitle">Vocabulario para demostrar serenidad operativa durante eventos dominicales en vivo.</p>
+
+        <table class="vocab-table">
+          <thead>
+            <tr>
+              <th>Término Clave</th>
+              <th>Fonética en Español</th>
+              <th>Uso en la Entrevista</th>
+              <th>Ejemplo Basado en tus Respuestas</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="vocab-word">Triage</td>
+              <td><span class="vocab-phonetic">[tri-AAZH]</span></td>
+              <td>Identificar rápidamente qué resolver primero.</td>
+              <td class="vocab-example">"Under pressure, I quickly triage the most critical issue."</td>
+            </tr>
+            <tr>
+              <td class="vocab-word">Double-check</td>
+              <td><span class="vocab-phonetic">[DAB-el-chek]</span></td>
+              <td>Tu hábito de re-verificar antes de publicar.</td>
+              <td class="vocab-example">"I fix the file and double-check it before delivery."</td>
+            </tr>
+            <tr>
+              <td class="vocab-word">Multitasking</td>
+              <td><span class="vocab-phonetic">[MAL-ti-tas-king]</span></td>
+              <td>Gestionar varias tareas en paralelo.</td>
+              <td class="vocab-example">"I stay structured even when managing parallel tasks."</td>
+            </tr>
+            <tr>
+              <td class="vocab-word">Worship</td>
+              <td><span class="vocab-phonetic">[WER-ship]</span></td>
+              <td>La misa o transmisión en vivo de la iglesia.</td>
+              <td class="vocab-example">"Resolving urgent assets before the worship experience."</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="slide-footer">
+        <span class="slide-counter">Slide 15 / 25</span>
+        <a href="#slide-16" class="next-btn">Next: Module 3 (Roleplay Sandbox) →</a>
+      </div>
+    </section>
+
+    <section id="slide-16" class="slide">
+      <div>
+        <span class="slide-badge">MODULE 3 • IMPROVISATION SANDBOX</span>
+        <h2>Crisis Sandbox: "Tell Me About High-Pressure Situations"</h2>
+        <p class="slide-subtitle">Demonstrate composure and decisive action using your real multitasking experience.</p>
+
+        <div class="grid-3">
+          <div class="card">
+            <div class="card-title">Approach 1: Methodical Triage</div>
+            <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.75rem;">Your exact response formatted for executive delivery:</p>
+            <div style="font-size:0.8rem; line-height:1.6; color:var(--text);">
+              "I regularly handle tight deadlines and last-minute file corrections. When an issue occurs right before launch, I immediately isolate what is critical, resolve the problem, and double-check formatting and text before final delivery. Even with multiple tasks running in parallel, keeping a structured process prevents panic."
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-title">Approach 2: London Client Example</div>
+            <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.75rem;">Highlighting overseas urgent requests:</p>
+            <div style="font-size:0.8rem; line-height:1.6; color:var(--text);">
+              "With international clients like Tu Skin Clinic in London, time differences often require fast turnarounds. When unexpected website updates or urgent social promos land, I prioritize live customer-facing assets first, verify all copy, and push the update cleanly without missing the campaign window."
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-title">Approach 3: Sunday Broadcast Readiness</div>
+            <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.75rem;">Bridging your method to Harvest Church:</p>
+            <div style="font-size:0.8rem; line-height:1.6; color:var(--text);">
+              "In live production, surprises happen. If a sermon graphic or lower-third needs a correction 20 minutes before a broadcast, I treat it with calm triage. I fix the source template in Photoshop, re-verify the brief, and confirm delivery with the production lead."
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:1rem; border-left: 3px solid var(--primary);">
+          <div style="font-family:var(--mono); font-size:0.8rem; color:var(--primary); font-weight:700;">
+            Closing Loop: "During weekend worship experiences, what is the communication protocol between the tech booth and the media manager?"
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-footer">
+        <span class="slide-counter">Slide 16 / 25</span>
+        <a href="#slide-17" class="next-btn">Next: Module 4 (Video Modeling) →</a>
+      </div>
+    </section>
+
+    <section id="slide-17" class="slide">
+      <div>
+        <span class="slide-badge">MODULE 4 • VALUE PROPOSITION</span>
+        <h2>Video Modeling: "Why Should We Hire You?"</h2>
+        <p class="slide-subtitle">Watch Erin McGoff explain how to position yourself as an indispensable problem-solver, not just another resume.</p>
+
+        <div class="grid-2">
+          <div>
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/eyehDPkAQRA?start=150" title="Why Hire You" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div>
+            <div class="framework-box">
+              <div class="framework-title">The Multiplier Positioning</div>
+              <div class="framework-text">Position yourself as an end-to-end creative multiplier who combines UI/CMS, video editing, and AI acceleration to handle the workload of multiple people.</div>
+            </div>
+            <div class="card" style="margin-top:1rem;">
+              <div class="card-title">Your AI Philosophy:</div>
+              <p style="font-size:0.85rem; line-height:1.7; color:var(--text-muted);">
+                Explicas con total madurez que la IA (Claude, ChatGPT, Runway, Veo, Vertex AI) te sirve para investigar y acelerar etapas, pero que el criterio y el objetivo de comunicación siempre mandan.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-footer">
+        <span class="slide-counter">Slide 17 / 25</span>
+        <a href="#slide-18" class="next-btn">Next: Module 4 (Vocab & Phonics) →</a>
+      </div>
+    </section>
+
+    <section id="slide-18" class="slide">
+      <div>
+        <span class="slide-badge">MODULE 4 • KEY PHONETICS</span>
+        <h2>AI & Value Proposition Focused Phonics</h2>
+        <p class="slide-subtitle">Vocabulario para explicar tu stack de IA y tu criterio de diseño.</p>
+
+        <table class="vocab-table">
+          <thead>
+            <tr>
+              <th>Término Clave</th>
+              <th>Fonética en Español</th>
+              <th>Uso en la Entrevista</th>
+              <th>Ejemplo Basado en tus Respuestas</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="vocab-word">Generative AI</td>
+              <td><span class="vocab-phonetic">[JEN-er-a-tiv EI-AI]</span></td>
+              <td>Tu uso diario de Runway, Veo y Claude.</td>
+              <td class="vocab-example">"I incorporate generative AI as a regular part of my workflow."</td>
+            </tr>
+            <tr>
+              <td class="vocab-word">Alternative</td>
+              <td><span class="vocab-phonetic">[ol-TER-na-tiv]</span></td>
+              <td>Explorar múltiples opciones visuales rápido.</td>
+              <td class="vocab-example">"It allows me to explore creative alternatives faster."</td>
+            </tr>
+            <tr>
+              <td class="vocab-word">Accelerate</td>
+              <td><span class="vocab-phonetic">[ak-SEL-e-reit]</span></td>
+              <td>Acelerar etapas de producción audiovisual.</td>
+              <td class="vocab-example">"Accelerating asset production while keeping creative standards."</td>
+            </tr>
+            <tr>
+              <td class="vocab-word">Criterion</td>
+              <td><span class="vocab-phonetic">[krai-TII-ri-on]</span></td>
+              <td>El criterio creativo que guía la herramienta.</td>
+              <td class="vocab-example">"AI is powerful, but creative criteria always guide the output."</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="slide-footer">
+        <span class="slide-counter">Slide 18 / 25</span>
+        <a href="#slide-19" class="next-btn">Next: Module 4 (Roleplay Sandbox) →</a>
+      </div>
+    </section>
+
+    <section id="slide-19" class="slide">
+      <div>
+        <span class="slide-badge">MODULE 4 • IMPROVISATION SANDBOX</span>
+        <h2>Value Prop Sandbox: "Why Should We Choose You?"</h2>
+        <p class="slide-subtitle">Articulate your competitive advantage using your exact AI and multimedia toolkit.</p>
+
+        <div class="grid-3">
+          <div class="card">
+            <div class="card-title">Angle 1: AI Grounded in Craft</div>
+            <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.75rem;">Your exact AI philosophy:</p>
+            <div style="font-size:0.8rem; line-height:1.6; color:var(--text);">
+              "I use AI daily to accelerate research and production. Tools like Claude and ChatGPT help with concepts and scripting, while Runway, Veo, and Vertex AI generate references and video elements. However, AI never replaces human taste; it simply helps me explore more visual alternatives while staying aligned with communication goals."
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-title">Angle 2: Full-Stack Autonomy</div>
+            <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.75rem;">Bridging design, web, and copy:</p>
+            <div style="font-size:0.8rem; line-height:1.6; color:var(--text);">
+              "I don't just export graphics. I review visual hierarchy, manage web CMS updates, coordinate Mailchimp campaigns, and cut video. For a role overseeing multiple platforms, you get a self-directed manager who can handle both strategy and day-to-day execution cleanly."
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-title">Angle 3: Ministry & Public Figure Fit</div>
+            <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.75rem;">Your perspective on faith communication:</p>
+            <div style="font-family:var(--mono); font-size:0.78rem; line-height:1.6; color:var(--text);">
+              "I have genuine respect for faith-based and community-driven communication. My focus is always understanding the core values and context of the audience so the media feels authentic, dignified, and visually compelling."
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:1rem; border-left: 3px solid var(--primary);">
+          <div style="font-family:var(--mono); font-size:0.8rem; color:var(--primary); font-weight:700;">
+            Closing Loop: "What specific content formats do you envision expanding for Bishop Foreman's personal brand?"
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-footer">
+        <span class="slide-counter">Slide 19 / 25</span>
+        <a href="#slide-20" class="next-btn">Next: Module 5 (Video Modeling) →</a>
+      </div>
+    </section>
+
+    <section id="slide-20" class="slide">
+      <div>
+        <span class="slide-badge">MODULE 5 • SALARY & BOUNDARIES</span>
+        <h2>Video Modeling: Salary & Availability</h2>
+        <p class="slide-subtitle">Watch Erin McGoff tackle salary questions with calm authority and boundary clarity.</p>
+
+        <div class="grid-2">
+          <div>
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/fWHNbFknCvk?start=0" title="Salary Expectations" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div>
+            <div class="framework-box">
+              <div class="framework-title">The Erin Boundary Principle</div>
+              <div class="framework-text">State your rate neutrally. Never apologize, negotiate yourself down before they counter, or show financial hesitation.</div>
+            </div>
+            <div class="card" style="margin-top:1rem;">
+              <div class="card-title">Your Clear Questions on Payment:</div>
+              <p style="font-size:0.85rem; line-height:1.7; color:var(--text-muted);">
+                Tus dudas sobre esquema de contratación y plataforma de pago internacional (ej. Deel, Wise, Payoneer) son preguntas habituales y necesarias en cualquier rol remoto con EE.UU.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-footer">
+        <span class="slide-counter">Slide 20 / 25</span>
+        <a href="#slide-21" class="next-btn">Next: Module 5 (Vocab & Phonics) →</a>
+      </div>
+    </section>
+
+    <section id="slide-21" class="slide">
+      <div>
+        <span class="slide-badge">MODULE 5 • KEY PHONETICS</span>
+        <h2>Compensation & Logistics Focused Phonics</h2>
+        <p class="slide-subtitle">Términos para hablar de remuneración y plataformas de contratación internacional.</p>
+
+        <table class="vocab-table">
+          <thead>
+            <tr>
+              <th>Término Clave</th>
+              <th>Fonética en Español</th>
+              <th>Uso en la Entrevista</th>
+              <th>Ejemplo Basado en tus Respuestas</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="vocab-word">Compensation</td>
+              <td><span class="vocab-phonetic">[com-pen-SEI-shon]</span></td>
+              <td>Confirmar la tarifa mensual de $1,500.</td>
+              <td class="vocab-example">"The compensation of $1,500 aligns with my expectations."</td>
+            </tr>
+            <tr>
+              <td class="vocab-word">Contractor</td>
+              <td><span class="vocab-phonetic">[KON-trak-tor]</span></td>
+              <td>Esquema contractual internacional B2B.</td>
+              <td class="vocab-example">"Working as an independent contractor."</td>
+            </tr>
+            <tr>
+              <td class="vocab-word">Disbursement</td>
+              <td><span class="vocab-phonetic">[dis-BERS-ment]</span></td>
+              <td>El desembolso o transferencia de pagos.</td>
+              <td class="vocab-example">"Which platform do you use for international payments?"</td>
+            </tr>
+            <tr>
+              <td class="vocab-word">Synchronous</td>
+              <td><span class="vocab-phonetic">[SIN-kro-nes]</span></td>
+              <td>Cumplir el horario lunes a viernes 8-5 EST.</td>
+              <td class="vocab-example">"I operate synchronously with US Eastern working hours."</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="slide-footer">
+        <span class="slide-counter">Slide 21 / 25</span>
+        <a href="#slide-22" class="next-btn">Next: Module 5 (Roleplay Sandbox) →</a>
+      </div>
+    </section>
+
+    <section id="slide-22" class="slide">
+      <div>
+        <span class="slide-badge">MODULE 5 • IMPROVISATION SANDBOX</span>
+        <h2>Salary & Hours Sandbox: "$1,500/mo & Availability"</h2>
+        <p class="slide-subtitle">Practice confirming compensation and clarifying contract logistics cleanly.</p>
+
+        <div class="grid-3">
+          <div class="card">
+            <div class="card-title">Approach 1: Direct Rate Confirmation</div>
+            <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.75rem;">Clear acceptance of the advertised rate:</p>
+            <div style="font-size:0.8rem; line-height:1.6; color:var(--text);">
+              "The advertised compensation of $1,500 USD per month aligns with my expectations for this dedicated role. I operate synchronously with Eastern hours from 8 to 5, and I am fully prepared to be on call for weekend worship needs."
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-title">Approach 2: Clarifying Payment Platform</div>
+            <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.75rem;">Asking your logistical question naturally:</p>
+            <div style="font-size:0.8rem; line-height:1.6; color:var(--text);">
+              "The $1,500 monthly rate is completely fine. From an administrative standpoint, what platform do you typically use for international contractor disbursements—such as Deel, Wise, or direct wire?"
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-title">Approach 3: Long-term Dedication</div>
+            <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.75rem;">Confirming focus and availability:</p>
+            <div style="font-size:0.8rem; line-height:1.6; color:var(--text);">
+              "I am seeking a long-term full-time partnership where I can elevate the media ecosystem. Harvest Church will have my complete operational focus during US business hours and weekend services."
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:1rem; border-left: 3px solid var(--primary);">
+          <div style="font-family:var(--mono); font-size:0.8rem; color:var(--primary); font-weight:700;">
+            Closing Loop: "What software suite and AI subscriptions will be provided for design, video editing, and script generation?"
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-footer">
+        <span class="slide-counter">Slide 22 / 25</span>
+        <a href="#slide-23" class="next-btn">Next: Mock 1 (Agency Screener) →</a>
+      </div>
+    </section>
+
+    <section id="slide-23" class="slide">
+      <div>
+        <span class="slide-badge">SIMULATION PHASE 1 • FAST-PACED SCREENER</span>
+        <h2>Mock Round 1: Remote Hero Recruiter</h2>
+        <p class="slide-subtitle">Rapid questions testing English fluency, technical stack familiarity, and time management.</p>
+
+        <div class="grid-3">
+          <div class="card">
+            <div class="card-title">1. Handling Parallel Tasks</div>
+            <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.5rem;">
+              "You coordinate designers at Owlbox and have clients at wewant. How do you handle multiple urgent requests without dropping the ball?"
+            </p>
+            <div style="font-family:var(--mono); font-size:0.75rem; color:var(--primary);">
+              Your real answer: Morning Slack triage, isolating priorities, and double-checking files.
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-title">2. Web & CMS Experience</div>
+            <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.5rem;">
+              "This role involves updating Boxcast and GoodBarber. Have you worked with live content systems?"
+            </p>
+            <div style="font-family:var(--mono); font-size:0.75rem; color:var(--accent);">
+              Your real answer: Ongoing website maintenance and Mailchimp campaigns for Tu Skin Clinic in London.
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-title">3. Schedule & Weekend Coverage</div>
+            <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.5rem;">
+              "The hours are Monday through Friday 8 to 5 EST plus weekend worship availability for $1,500/month. Does that work for you?"
+            </p>
+            <div style="font-family:var(--mono); font-size:0.75rem; color:var(--success);">
+              Your real answer: Yes, fully comfortable with EST hours and on-call weekend broadcast support.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-footer">
+        <span class="slide-counter">Slide 23 / 25</span>
+        <a href="#slide-24" class="next-btn">Next: Mock 2 (Church Team) →</a>
+      </div>
+    </section>
+
+    <section id="slide-24" class="slide">
+      <div>
+        <span class="slide-badge">SIMULATION PHASE 2 • EXECUTIVE LEADERSHIP</span>
+        <h2>Mock Round 2: Bishop Foreman’s Team</h2>
+        <p class="slide-subtitle">Questions focusing on ministry culture, public-figure discretion, and weekend worship dedication.</p>
+
+        <div class="grid-3">
+          <div class="card">
+            <div class="card-title">1. Ministry & Public Figure Fit</div>
+            <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.5rem;">
+              "Are you comfortable representing a faith-based community and public leader publicly?"
+            </p>
+            <div style="font-family:var(--mono); font-size:0.75rem; color:var(--primary);">
+              Your real answer: Absolutely comfortable; understanding community values ensures authentic communication.
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-title">2. Visual Quality Control</div>
+            <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.5rem;">
+              "How do you ensure graphics and sermon cuts represent our brand with excellence?"
+            </p>
+            <div style="font-family:var(--mono); font-size:0.75rem; color:var(--accent);">
+              Your real answer: Pre-release verification of brief adherence, visual hierarchy, typography, and copy accuracy.
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-title">3. Role Clarification Question</div>
+            <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.5rem;">
+              "Do you have any questions for us regarding the leadership brand?"
+            </p>
+            <div style="font-family:var(--mono); font-size:0.75rem; color:var(--success);">
+              Your real answer: "Do you already have a defined visual strategy separating Harvest Church from Bishop Foreman's personal brand?"
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-footer">
+        <span class="slide-counter">Slide 24 / 25</span>
+        <a href="#slide-25" class="next-btn">Next: 🎙️️ Interactive Voice Lab →</a>
+      </div>
+    </section>
+
+    <section id="slide-25" class="slide">
+      <div>
+        <span class="slide-badge">SPECIAL COURSES TRACK • VOICE LAB</span>
+        <h2>🎙️ Real-Time Voice Lab (Google Speech API)</h2>
+        <p class="slide-subtitle">Selecciona una respuesta real de entrevista basada en tu experiencia, dale clic al micrófono y léela en voz alta. Google Speech evalúa tu pronunciación en tiempo real.</p>
+
+        <div class="voice-lab-interface">
+          <div class="lab-selector">
+            <label for="sentenceSelect" style="font-size: 0.85rem; font-weight: 700;">Select Target Task:</label>
+            <select id="sentenceSelect" class="select-dropdown" onchange="loadTargetSentence()">
+              <option value="0">01: Daily Workflow (Slack Triage & Copy QA)</option>
+              <option value="1">02: Overseas Client Experience (Tu Skin Clinic in London)</option>
+              <option value="2">03: AI Pipeline (Claude, ChatGPT, Runway & Veo)</option>
+              <option value="3">04: Composure Under Pressure (Isolating Priorities)</option>
+              <option value="4">05: Overcoming Perfectionism (Milestones & Deadlines)</option>
+              <option value="5">06: Readiness for Faith & Community Communication</option>
+              <option value="6">07: Sunday Worship Production Commitment</option>
+              <option value="7">08: Firm Salary Acceptance ($1,500 Full-Time)</option>
+              <option value="8">09: Brand Strategy Question (Church vs. Bishop Brand)</option>
+              <option value="9">10: Operational Question (Review & Approval Flow)</option>
+            </select>
+          </div>
+
+          <div class="target-sentence-card">
+            <div class="target-label">Target Interview Sentence:</div>
+            <div id="targetDisplay" class="target-sentence">Loading...</div>
+            <div id="phoneticDisplay" class="target-phonetics">Loading...</div>
+          </div>
+
+          <div class="voice-controls">
+            <button id="micBtn" class="mic-button" onclick="toggleRecognition()">
+              <span id="micIcon">🎤</span> <span id="micText">Start Speaking</span>
+            </button>
+            <span id="speechStatus" class="status-indicator">Click to start speech check</span>
+          </div>
+
+          <div class="feedback-panel">
+            <div class="feedback-header">
+              <span>Real-Time Feedback (Google Speech Engine):</span>
+              <span id="accuracyScore" class="score-badge">Score: --%</span>
+            </div>
+            <div id="recognizedWords" class="recognized-words">
+              <span style="color:var(--text-muted); font-size: 0.95rem;">Your transcribed speech will appear here with color-coded word accuracy...</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-footer">
+        <span class="slide-counter">Slide 25 / 25</span>
+        <a href="#slide-0" class="next-btn">Back to Start ⟲</a>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    const voiceLabSentences = [
+      {
+        text: "I organize daily tasks in Slack and check visual hierarchy and text accuracy before publishing.",
+        chips: [
+          { word: "organize", pron: "[OR-ga-naiz]" },
+          { word: "hierarchy", pron: "[JAI-er-ar-ki]" },
+          { word: "accuracy", pron: "[AK-yu-ra-si]" },
+          { word: "publishing", pron: "[PAB-lish-ing]" }
+        ]
+      },
+      {
+        text: "I have managed website maintenance and digital content for Tu Skin Clinic in London.",
+        chips: [
+          { word: "managed", pron: "[MAN-ijd]" },
+          { word: "maintenance", pron: "[MEIN-ten-ens]" },
+          { word: "clinic", pron: "[KLIN-ik]" },
+          { word: "London", pron: "[LAN-don]" }
+        ]
+      },
+      {
+        text: "I use Claude and Runway to accelerate asset production while keeping high creative criteria.",
+        chips: [
+          { word: "accelerate", pron: "[ak-SEL-e-reit]" },
+          { word: "production", pron: "[pro-DAK-shon]" },
+          { word: "creative", pron: "[kri-EI-tiv]" },
+          { word: "criteria", pron: "[krai-TII-ri-a]" }
+        ]
+      },
+      {
+        text: "When urgent issues occur near launch I isolate priorities and double check before delivery.",
+        chips: [
+          { word: "urgent", pron: "[ER-jent]" },
+          { word: "isolate", pron: "[AI-so-leit]" },
+          { word: "priorities", pron: "[prai-OR-i-tiz]" },
+          { word: "delivery", pron: "[di-LIV-er-i]" }
+        ]
+      },
+      {
+        text: "I manage perfectionism by dividing projects into structured review milestones and clear deadlines.",
+        chips: [
+          { word: "perfectionism", pron: "[per-FEK-shon-i-zem]" },
+          { word: "dividing", pron: "[di-VAI-ding]" },
+          { word: "milestones", pron: "[MAIL-stounz]" },
+          { word: "deadlines", pron: "[DED-lainz]" }
+        ]
+      },
+      {
+        text: "I have deep respect for faith based communication and adapting content to community values.",
+        chips: [
+          { word: "respect", pron: "[ri-SPEKT]" },
+          { word: "faith based", pron: "[feith beist]" },
+          { word: "adapting", pron: "[a-DAP-ting]" },
+          { word: "community", pron: "[ko-MYUU-ni-ti]" }
+        ]
+      },
+      {
+        text: "I am fully prepared to be on call and support all production needs around Sunday worship.",
+        chips: [
+          { word: "prepared", pron: "[pri-PEERD]" },
+          { word: "on call", pron: "[on KOL]" },
+          { word: "production", pron: "[pro-DAK-shon]" },
+          { word: "worship", pron: "[WER-ship]" }
+        ]
+      },
+      {
+        text: "The compensation of fifteen hundred dollars aligns with my expectations for this dedicated schedule.",
+        chips: [
+          { word: "compensation", pron: "[com-pen-SEI-shon]" },
+          { word: "fifteen hundred", pron: "[fif-tiin HAN-dred]" },
+          { word: "aligns", pron: "[a-LAINZ]" },
+          { word: "dedicated", pron: "[DED-i-kei-tid]" }
+        ]
+      },
+      {
+        text: "Do you already have a defined visual strategy separating the church from the Bishop brand?",
+        chips: [
+          { word: "defined", pron: "[di-FAIND]" },
+          { word: "strategy", pron: "[STRA-te-ji]" },
+          { word: "separating", pron: "[SEP-a-rei-ting]" },
+          { word: "Bishop", pron: "[BI-shop]" }
+        ]
+      },
+      {
+        text: "How does the content review and approval process currently operate between media and leadership?",
+        chips: [
+          { word: "approval", pron: "[a-PRUU-val]" },
+          { word: "process", pron: "[PRO-ses]" },
+          { word: "operate", pron: "[OP-er-eit]" },
+          { word: "leadership", pron: "[LII-der-ship]" }
+        ]
+      }
+    ];
+
+    let currentSentenceIndex = 0;
+    let recognition = null;
+    let isRecording = false;
+
+    function loadTargetSentence() {
+      const select = document.getElementById("sentenceSelect");
+      currentSentenceIndex = parseInt(select.value);
+      const item = voiceLabSentences[currentSentenceIndex];
+      document.getElementById("targetDisplay").innerText = item.text;
+      
+      let chipsHtml = `<span style="font-size:0.75rem; text-transform:uppercase; color:var(--text-muted); margin-right:0.25rem;">Key Word Stress:</span>`;
+      item.chips.forEach(c => {
+        chipsHtml += `<span class="phonetic-chip"><strong>${c.word}</strong>:${c.pron}</span>`;
+      });
+      document.getElementById("phoneticDisplay").innerHTML = chipsHtml;
+      
+      resetFeedback();
+    }
+
+    function resetFeedback() {
+      document.getElementById("accuracyScore").innerText = "Score: --%";
+      document.getElementById("recognizedWords").innerHTML = `<span style="color:var(--text-muted); font-size: 0.95rem;">Your transcribed speech will appear here with color-coded word accuracy...</span>`;
+    }
+
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+    if (SpeechRecognition) {
+      recognition = new SpeechRecognition();
+      recognition.continuous = false;
+      recognition.interimResults = false;
+      recognition.lang = 'en-US';
+
+      recognition.onstart = function() {
+        isRecording = true;
+        document.getElementById("micBtn").classList.add("recording");
+        document.getElementById("micIcon").innerText = "⏹️";
+        document.getElementById("micText").innerText = "Listening...";
+        document.getElementById("speechStatus").innerText = "Listening to your voice...";
+      };
+
+      recognition.onend = function() {
+        isRecording = false;
+        document.getElementById("micBtn").classList.remove("recording");
+        document.getElementById("micIcon").innerText = "🎤";
+        document.getElementById("micText").innerText = "Start Speaking";
+        document.getElementById("speechStatus").innerText = "Analysis complete";
+      };
+
+      recognition.onresult = function(event) {
+        const spokenText = event.results[0][0].transcript.trim();
+        evaluateSpeech(spokenText);
+      };
+
+      recognition.onerror = function(event) {
+        isRecording = false;
+        document.getElementById("micBtn").classList.remove("recording");
+        document.getElementById("micIcon").innerText = "🎤";
+        document.getElementById("micText").innerText = "Start Speaking";
+        document.getElementById("speechStatus").innerText = "Error: " + event.error;
+      };
+    } else {
+      document.getElementById("speechStatus").innerText = "Web Speech API is not supported in this browser. Please open in Google Chrome.";
+    }
+
+    function toggleRecognition() {
+      if (!recognition) {
+        alert("Please use Google Chrome to enable Google's real-time Web Speech recognition engine.");
+        return;
+      }
+      if (isRecording) {
+        recognition.stop();
+      } else {
+        recognition.start();
+      }
+    }
+
+    function cleanString(str) {
+      return str
+        .toLowerCase()
+        .replace(/[-_\/]/g, " ")
+        .replace(/[.,#!$%\^&\*;:{}=`~()?"']/g, "")
+        .replace(/\s+/g, " ")
+        .trim();
+    }
+
+    function evaluateSpeech(spokenText) {
+      const targetText = voiceLabSentences[currentSentenceIndex].text;
+      
+      const targetWords = cleanString(targetText).split(" ").filter(Boolean);
+      const spokenWords = cleanString(spokenText).split(" ").filter(Boolean);
+
+      let correctCount = 0;
+      let htmlOutput = "";
+
+      targetWords.forEach(targetWord => {
+        if (spokenWords.includes(targetWord)) {
+          correctCount++;
+          htmlOutput += `<span class="word-correct">${targetWord}</span> `;
+        } else {
+          htmlOutput += `<span class="word-missed">${targetWord}</span> `;
+        }
+      });
+
+      const accuracy = Math.round((correctCount / targetWords.length) * 100);
+      document.getElementById("accuracyScore").innerText = `Score: ${accuracy}%`;
+      document.getElementById("recognizedWords").innerHTML = htmlOutput;
+    }
+
+    window.onload = function() {
+      loadTargetSentence();
+    };
+  </script>
+</body>
+</html>
